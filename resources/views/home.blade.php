@@ -9,13 +9,15 @@
 
                 <div class="card-body">
                 @if(Auth::user()->hasRole('admin'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        <div>Acceso como administrador</div>
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
+                    <div>You Are Admin</div>
+                </div>
                 @else
-                    <div>Acceso usuario</div>
-                        </div>
-                    @endif
+                <div class="alert alert-primary" role="alert">
+                    <div>You Are User</div>
+                </div>
+                @endif
 
                     You are logged in!
                 </div>
